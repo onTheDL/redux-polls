@@ -59,7 +59,7 @@ let polls = {
   },
   "6ni6ok3ym7mf1p33lnez": {
     id: '6ni6ok3ym7mf1p33lnez',
-    question: "How will we build UIs in 2019?",
+    question: "How will we build UIs in 2021?",
     author: 'dan_abramov',
     timestamp: 1468479767190,
     a: {

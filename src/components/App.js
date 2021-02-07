@@ -1,8 +1,22 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, {useEffect} from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { handleInitialData } from "../actions/shared"
 
 export default function App() {
   const store = useSelector((store) => store);
-  console.log("Store", store)
-  return <div>Redux Polls</div>;
+  const dispatch = useDispatch()
+  const loading = useSelector(state => state.authedUser === null)
+
+  useEffect(() => {
+    dispatch(handleInitialData())
+
+  }, [dispatch]) 
+  console.log('Store', store)
+
+  return (
+    <div className='container'>
+      {loading === false && <div>Redux Polls</div>}
+
+    </div>
+  );
 }
