@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { handleInitialData } from "../actions/shared"
+import Leaderboard from '../components/Leaderboard'
 
 export default function App() {
   const store = useSelector((store) => store);
@@ -15,7 +16,7 @@ export default function App() {
 
   return (
     <div className='container'>
-      {loading === false && <div>Redux Polls</div>}
+      {loading === false && <Leaderboard />}
 
     </div>
   );
